@@ -203,7 +203,8 @@
       <button id="team-right" aria-label="Scroll right" class="hidden md:flex absolute -right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
         <span class="text-xl">›</span>
       </button>
-  <div id="team-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-8 md:gap-16 mt-8 scrollbar-hide scroll-smooth md:justify-center w-full">
+      <div id="team-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-8 md:gap-16 mt-8 scrollbar-hide scroll-smooth md:justify-center w-full">
+        <div class="carousel-spacer flex-shrink-0"></div>
         <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
           <div class="w-48 h-48 rounded-full bg-black/10 flex items-center justify-center overflow-hidden">
             <!-- Diego profile image -->
@@ -236,7 +237,7 @@
             </a>
           </div>
         </div>
-        <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
+  <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
           <div class="w-48 h-48 rounded-full bg-black/10 flex items-center justify-center overflow-hidden">
             <!-- Cecil profile image -->
             <img src="Images/Cecil.jpg" alt="Cecil" class="w-full h-full object-cover rounded-full" />
@@ -247,6 +248,7 @@
             <img src="Images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
           </a>
         </div>
+  <div class="carousel-spacer flex-shrink-0"></div>
       </div>
     </div>
   </section>
@@ -589,13 +591,17 @@
         const btnL = document.getElementById('team-left');
         const btnR = document.getElementById('team-right');
         const cards = Array.from(scroller.querySelectorAll('.flex-col.items-center'));
+        const spacers = () => Array.from(scroller.querySelectorAll('.carousel-spacer'));
+        function sizeSpacers(){
+          if(!cards.length) return;
+          const side = (scroller.clientWidth - cards[0].offsetWidth)/2;
+          spacers().forEach(s => { s.style.width = side > 0 ? side + 'px' : '0px'; });
+        }
         function centerNearest(){
           const scrollCenter = scroller.scrollLeft + scroller.clientWidth/2;
           let best = null; let bestDist = Infinity;
           cards.forEach(c => {
-            const rect = c.getBoundingClientRect();
-            const left = rect.left + window.scrollX - scroller.getBoundingClientRect().left - window.scrollX + scroller.scrollLeft;
-            const center = left + rect.width/2;
+            const center = c.offsetLeft + c.offsetWidth/2;
             const dist = Math.abs(center - scrollCenter);
             if(dist < bestDist){ bestDist = dist; best = c; }
           });
@@ -616,10 +622,11 @@
         btnL && btnL.addEventListener('click', ()=> smoothScroll(-cardWidth()-32));
         btnR && btnR.addEventListener('click', ()=> smoothScroll(cardWidth()+32));
         scroller.addEventListener('scroll', updateButtons, { passive: true });
-        window.addEventListener('resize', updateButtons);
+        window.addEventListener('resize', ()=>{ sizeSpacers(); updateButtons(); });
+        sizeSpacers();
         updateButtons();
-        // initial center first card on mobile
-        if(window.innerWidth < 768 && cards[0]){
+        // initial center first card
+        if(cards[0]){
           const start = cards[0].offsetLeft + cards[0].offsetWidth/2 - scroller.clientWidth/2;
           scroller.scrollLeft = start > 0 ? start : 0;
         }
