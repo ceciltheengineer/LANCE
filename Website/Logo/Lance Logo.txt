@@ -1,0 +1,58 @@
+/* others */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* text 5 */
+
+position: absolute;
+left: 1.03%;
+right: 82.93%;
+top: 7.33%;
+bottom: 15.65%;
+
+
+
+/* text 4 */
+
+position: absolute;
+left: 41.59%;
+right: 42.31%;
+top: 7.31%;
+bottom: 15.65%;
+
+
+
+/* text 3 */
+
+position: absolute;
+left: 62%;
+right: 22.4%;
+top: 7.4%;
+bottom: 15.68%;
+
+
+
+/* text 2 */
+
+position: absolute;
+left: 82.2%;
+right: 1.75%;
+top: 7.44%;
+bottom: 15.65%;
+
+
+
+/* text 1 */
+
+position: absolute;
+left: 21.72%;
+right: 62.89%;
+top: 7.44%;
+bottom: 15.73%;
+
