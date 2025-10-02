@@ -197,10 +197,10 @@
   <h2 data-i18="contact.title" class="text-3xl md:text-4xl font-semibold">Let's Talk About Your Transformation</h2>
   <p data-i18="contact.description" class="mt-3 text-black/70">Every project is unique. Contact us to design a plan tailored to your goals and receive a detailed value proposition.</p>
   <div class="mt-8 relative -mx-8 md:mx-0">
-      <button id="team-left" aria-label="Scroll left" class="hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
+      <button id="team-left" aria-label="Scroll left" class="flex md:hidden absolute -left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
         <span class="text-xl">‹</span>
       </button>
-      <button id="team-right" aria-label="Scroll right" class="hidden md:flex absolute -right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
+      <button id="team-right" aria-label="Scroll right" class="flex md:hidden absolute -right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
         <span class="text-xl">›</span>
       </button>
   <div id="team-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-8 md:gap-16 mt-8 scrollbar-hide scroll-smooth md:justify-center w-full">
@@ -659,6 +659,9 @@
         function updateButtons(){
           const maxScroll = scroller.scrollWidth - scroller.clientWidth - 4;
           const noScroll = maxScroll <= 0 || scroller.classList.contains('overflow-x-hidden');
+          const isMobile = window.innerWidth < 768;
+          // Only show these small circular buttons on mobile; hide on md+ (desktop)
+          if(!isMobile){ if(btnL) btnL.style.display='none'; if(btnR) btnR.style.display='none'; return; }
           if(btnL) btnL.style.opacity = noScroll || scroller.scrollLeft <= 4 ? '0.3' : '1';
           if(btnR) btnR.style.opacity = noScroll || scroller.scrollLeft >= maxScroll ? '0.3' : '1';
           if(noScroll){ if(btnL) btnL.style.display='none'; if(btnR) btnR.style.display='none'; }
