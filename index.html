@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LANCE AI — Build to Transform</title>
+  <meta name="description" content="LANCE AI transforms businesses and institutions with artificial intelligence. We offer diagnostics, custom solutions, and process automation." />
+  <meta property="og:title" content="LANCE AI — Build to Transform" /> <!-- Tagline translation handled in page body -->
+  <meta property="og:description" content="Operational transformation with AI to improve efficiency, reduce costs, and create new opportunities." />
+  <meta property="og:url" content="https://lance-ai.com" />
+  <link rel="canonical" href="https://lance-ai.com" />
+  <meta name="theme-color" content="#000000" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior:smooth; }
+    body { font-feature-settings:"ss01" on, "ss02" on; }
+    .shadow-hard { box-shadow: 6px 6px 0 0 #000; }
+    .shadow-hard-white { box-shadow: 6px 6px 0 0 #FFF; }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes bounce-right {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-20px); }
+    }
+    .bounce-animation {
+      animation: bounce-right 1.5s ease-in-out;
+    }
+    /* Hide scrollbar (Firefox / WebKit) */
+    .scrollbar-hide { scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+  </style>
+  <link rel="icon" href="Logo/LANCE Secondary Logo.png" type="image/png">
+</head>
+<body class="min-h-screen bg-white text-black antialiased overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full border-b border-black/10 bg-white">
+    <div class="w-full px-8 py-2 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-0">
+        <img src="Logo/LANCE Primary Logo.png" alt="LANCE AI Logo" class="h-8 w-auto">
+      </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#services" data-i18="nav.services" class="hover:opacity-70 transition-opacity">Services</a>
+        <a href="#methodology" data-i18="nav.methodology" class="hover:opacity-70 transition-opacity">Methodology</a>
+        <a href="#differentiators" data-i18="nav.differentiators" class="hover:opacity-70 transition-opacity">Differentiators</a>
+        <a href="#contact" data-i18="nav.contact" class="hover:opacity-70 transition-opacity">Contact</a>
+      </nav>
+      <!-- Mobile Nav Toggle -->
+      <button id="mobile-menu-toggle" class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-black" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <div class="flex items-center gap-3">
+        <div id="lang-toggle" class="text-sm flex items-center gap-2 mr-2">
+          <button data-lang="en" class="px-2 py-1 rounded text-black/70 hover:text-black"><img src="Images/USA Flag.png" alt="EN" class="h-4 object-contain"></button>
+          <span class="text-black/30">/</span>
+          <button data-lang="es" class="px-2 py-1 rounded text-black/70 hover:text-black"><img src="Images/Mexico Flag.png" alt="ES" class="h-4 object-contain"></button>
+        </div>
+  <a href="#contact" id="cta-schedule" data-i18="header.cta" class="hidden md:inline-flex items-center gap-2 rounded-full border border-black px-4 py-2 text-sm hover:-translate-y-0.5 transition duration-200 ease-out hover:shadow-hard">Schedule Demo</a>
+      </div>
+    </div>
+    <!-- Mobile Nav Menu -->
+    <nav id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center gap-8 text-lg font-medium transition-transform duration-300 ease-in-out transform -translate-y-full" style="display:none;">
+      <a href="#services" data-i18="nav.services" class="hover:opacity-70 transition-opacity">Services</a>
+      <a href="#methodology" data-i18="nav.methodology" class="hover:opacity-70 transition-opacity">Methodology</a>
+      <a href="#differentiators" data-i18="nav.differentiators" class="hover:opacity-70 transition-opacity">Differentiators</a>
+      <a href="#contact" data-i18="nav.contact" class="hover:opacity-70 transition-opacity">Contact</a>
+      <button id="mobile-menu-close" class="mt-8 px-4 py-2 rounded border border-black text-black">Cerrar</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-black text-white h-[90vh] md:h-screen flex items-center">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Images/Hero Image.png');"></div>
+  <div class="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black md:via-black/90 md:to-black/5"></div>
+    <div class="relative w-full px-8">
+        <div class="max-w-xl">
+          <div>
+            <p data-i18="hero.kicker" class="font-semibold tracking-tight text-white/80">BUILD TO TRANSFORM</p>
+            <h1 data-i18="hero.title" class="mt-2 text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
+              We transform businesses with Artificial Intelligence.
+            </h1>
+            <p data-i18="hero.description" class="mt-6 text-lg text-white/70">
+              We improve operational efficiency, reduce costs, and create new business opportunities through strategic AI integration.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#contact" data-i18="hero.cta_demo" class="inline-flex justify-center rounded-full bg-white px-6 py-3 text-black font-semibold hover:opacity-90 hover:-translate-y-0.5 transition duration-200 ease-out hover:shadow-hard-white">Request a Demo</a>
+              <a href="#services" data-i18="hero.cta_services" class="inline-flex justify-center rounded-full border border-white px-6 py-3 hover:-translate-y-0.5 transition duration-200 ease-out hover:shadow-hard-white">View Services</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section id="methodology" class="w-full px-8 py-20 border-t border-black/10 min-h-[50vh] flex items-center">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 data-i18="methodology.title" class="text-3xl md:text-4xl font-semibold">Analytical and Engineering Methodology</h2>
+        <p data-i18="methodology.desc" class="mt-4 text-black/70">We combine analytical rigor with applied engineering to create efficient and practical solutions. Our approach is based on a deep diagnosis to identify bottlenecks and prioritize the actions with the greatest impact.</p>
+        <ul class="mt-6 grid gap-4 text-sm text-black/80">
+          <li class="flex items-start gap-3"><span class="mt-1">✓</span><span data-i18="methodology.diag" class="inline-block"><strong>Deep Diagnosis:</strong> Exhaustive analysis to detect limitations and opportunities.</span></li>
+          <li class="flex items-start gap-3"><span class="mt-1">✓</span><span data-i18="methodology.practical" class="inline-block"><strong>Practical Solutions:</strong> Realistic and adaptable proposals for your operational environment.</span></li>
+          <li class="flex items-start gap-3"><span class="mt-1">✓</span><span data-i18="methodology.implement" class="inline-block"><strong>Efficient Implementation:</strong> Development aligned with your capabilities for real impact.</span></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-black/10 p-8 bg-black/5">
+        <h3 data-i18="methodology.strategy.title" class="text-lg font-medium">AI Strategy and Governance</h3>
+        <p data-i18="methodology.strategy.p" class="mt-2 text-sm text-black/70">We advise leaders in creating AI plans aligned with organizational goals and promote the responsible adoption of technology. We establish governance frameworks for the safe, ethical, and regulatory use of AI, strengthening trust and corporate reputation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Services -->
+  <section id="services" class="w-full px-8 py-20 relative group animate-bounce-on-scroll">
+  <div class="absolute inset-0 w-full h-full bg-black/80 pointer-events-none"></div>
+  <h2 data-i18="services.title" class="text-3xl md:text-4xl font-semibold text-center text-white relative z-10">Main AI Integration Services</h2>
+  <div id="slideshow-container" class="mt-12 relative w-full h-auto md:h-96 z-10 text-white flex items-center justify-center overflow-hidden pb-12 md:pb-0">
+  <button id="slide-left" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/80 transition opacity-0 group-hover:opacity-100">
+    <img src="Images/Arrow.png" alt="Refresh Arrow" class="h-8 object-contain rotate-180" style="width:auto;max-width:2rem;object-fit:contain;" />
+  </button>
+  <button id="slide-right" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/80 transition opacity-0 group-hover:opacity-100">
+    <img src="Images/Arrow.png" alt="Refresh Arrow" class="h-8 object-contain" style="width:auto;max-width:2rem;object-fit:contain;" />
+  </button>
+  <div id="slides-wrapper" class="relative w-full h-full flex transition-transform duration-500 ease-in-out">
+  <div class="slide min-w-full h-full flex flex-col md:flex-row-reverse items-center justify-center gap-8 md:gap-12 px-6 sm:px-8 md:px-16 py-6 md:py-0">
+  <img src="Images/AI Opportunity Scan.jpg" alt="AI Opportunity Scan" class="w-full max-w-[300px] md:max-w-[380px] md:max-h-96 object-contain rounded-xl shadow-lg mx-auto bg-black/30 p-2" />
+    <div>
+          <h3 class="text-xl font-bold text-white" data-i18="services.scan.title">AI Opportunity Scan: Process Diagnosis and Roadmap</h3>
+          <ul class="mt-4 list-disc pl-5 space-y-2 text-white/90">
+            <li><strong data-i18="services.scan.label1">Detailed Process Analysis:</strong> <span data-i18="services.scan.desc1">An exhaustive review of current processes is conducted to find areas where AI can make improvements.</span></li>
+            <li><strong data-i18="services.scan.label2">Identification of AI Opportunities:</strong> <span data-i18="services.scan.desc2">The service pinpoints specific opportunities where artificial intelligence can optimize processes.</span></li>
+            <li><strong data-i18="services.scan.label3">Scalable Strategic Plan:</strong> <span data-i18="services.scan.desc3">A roadmap is created to effectively implement AI and allow for future growth.</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+  <div class="slide min-w-full h-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 sm:px-8 md:px-16 py-6 md:py-0">
+  <img src="Images/Custom AI Systems Integration.jpg" alt="Custom AI Systems Integration" class="w-full max-w-[300px] md:max-w-[380px] md:max-h-96 object-contain rounded-xl shadow-lg mx-auto bg-black/30 p-2" />
+    <div>
+          <h3 class="text-xl font-bold text-white" data-i18="services.custom.title">Custom AI Systems Integration: Personalized Solutions</h3>
+          <ul class="mt-4 list-disc pl-5 space-y-2 text-white/90 text-left">
+            <li><strong data-i18="services.custom.label1">Custom AI Design:</strong> <span data-i18="services.custom.desc1">Artificial intelligence systems are created to fit the client's specific needs for optimal solutions.</span></li>
+            <li><strong data-i18="services.custom.label2">Fluid Integration:</strong> <span data-i18="services.custom.desc2">The systems seamlessly integrate with the client's existing technology to ensure efficiency.</span></li>
+            <li><strong data-i18="services.custom.label3">Results Optimization:</strong> <span data-i18="services.custom.desc3">Personalized AI integration maximizes efficiency and improves the client's operational results.</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+  <div class="slide min-w-full h-full flex flex-col md:flex-row-reverse items-center justify-center gap-8 md:gap-12 px-6 sm:px-8 md:px-16 py-6 md:py-0">
+  <img src="Images/AI Workflow Automation Sprint.jpg" alt="AI Workflow Automation Sprint" class="w-full max-w-[300px] md:max-w-[380px] md:max-h-96 object-contain rounded-xl shadow-lg mx-auto bg-black/30 p-2" />
+    <div>
+          <h3 class="text-xl font-bold text-white" data-i18="services.sprint.title">AI Workflow Automation Sprint™: Pragmatic Automation</h3>
+          <ul class="mt-4 list-disc pl-5 space-y-2 text-white/90">
+            <li><strong data-i18="services.sprint.label1">Automation Acceleration:</strong> <span data-i18="services.sprint.desc1">This service uses AI to quickly automate workflows and optimize processes.</span></li>
+            <li><strong data-i18="services.sprint.label2">Pragmatic Approach:</strong> <span data-i18="services.sprint.desc2">A practical approach is used to avoid complexities and achieve clear, effective results.</span></li>
+            <li><strong data-i18="services.sprint.label3">Fast, Measurable Results:</strong> <span data-i18="services.sprint.desc3">The service guarantees visible and quantifiable results in a short amount of time through automation.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+  <!-- Pause button removed -->
+    </div>
+  </section>
+
+  <!-- Differentiators -->
+  <section id="differentiators" class="w-full px-8 py-20 border-t border-black/10 animate-on-scroll">
+  <h2 data-i18="diffs.title" class="text-3xl md:text-4xl font-semibold text-center">Our Values</h2>
+    <p data-i18="diffs.subtitle" class="mt-3 text-black/70 max-w-2xl mx-auto text-center">Our competitive advantage translates into your success.</p>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="rounded-3xl border border-black/10 p-6 text-center">
+        <h3 data-i18="diffs.adapt.title" class="text-lg font-medium">Adaptability to Operational DNA</h3>
+        <p data-i18="diffs.adapt.p" class="mt-2 text-sm text-black/70">We adapt AI to your culture and processes, ensuring natural and effective integration.</p>
+      </div>
+      <div class="rounded-3xl border border-black/10 p-6 text-center">
+        <h3 data-i18="diffs.prag.title" class="text-lg font-medium">Pragmatic Methodologies</h3>
+        <p data-i18="diffs.prag.p" class="mt-2 text-sm text-black/70">We prioritize concrete actions with quick impact to show tangible short-term benefits.</p>
+      </div>
+      <div class="rounded-3xl border border-black/10 p-6 text-center">
+        <h3 data-i18="diffs.impact.title" class="text-lg font-medium">Tangible Impact on Growth</h3>
+        <p data-i18="diffs.impact.p" class="mt-2 text-sm text-black/70">We generate measurable improvements in productivity, cost reduction, and new business opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+
+  <!-- Pricing / Contact -->
+  <section id="contact" class="w-full px-8 py-20 border-t border-black/10 text-center animate-on-scroll">
+  <h2 data-i18="contact.title" class="text-3xl md:text-4xl font-semibold">Let's Talk About Your Transformation</h2>
+  <p data-i18="contact.description" class="mt-3 text-black/70">Every project is unique. Contact us to design a plan tailored to your goals and receive a detailed value proposition.</p>
+  <div class="mt-8 relative -mx-8 md:mx-0">
+      <button id="team-left" aria-label="Scroll left" class="flex md:hidden absolute -left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
+        <span class="text-xl">‹</span>
+      </button>
+      <button id="team-right" aria-label="Scroll right" class="flex md:hidden absolute -right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/20 bg-white shadow hover:bg-black/5 transition items-center justify-center">
+        <span class="text-xl">›</span>
+      </button>
+  <div id="team-scroll" class="flex overflow-x-auto snap-x snap-mandatory gap-8 md:gap-16 mt-8 scrollbar-hide scroll-smooth md:justify-center w-full">
+        <div class="carousel-spacer flex-shrink-0"></div>
+        <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
+          <div class="w-48 h-48 rounded-full bg-black/10 flex items-center justify-center overflow-hidden">
+            <!-- Diego profile image -->
+            <img src="Images/Diego.jpg" alt="Diego Ochoa" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <span class="mt-4 font-semibold underline">Diego Ochoa</span>
+          <span class="text-sm text-black/60" data-i18="team.diego.title">Project Manager</span>
+          <div class="flex gap-2 mt-2">
+            <a href="https://www.linkedin.com/in/diego-ortega-2025-civil-engineer/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow hover:bg-blue-700 transition">
+              <img src="Images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="https://wa.me/528116853251" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow hover:bg-green-600 transition">
+              <img src="Images/whatsapp.png" alt="WhatsApp" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
+          <div class="w-48 h-48 rounded-full bg-black/10 flex items-center justify-center overflow-hidden">
+            <!-- Marcelo profile image -->
+            <img src="Images/Marcelo.jpg" alt="Marcelo" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <span class="mt-4 font-semibold underline">Marcelo Garcia</span>
+          <span class="text-sm text-black/60" data-i18="team.marcelo.title">Head of Operations</span>
+          <div class="flex gap-2 mt-2">
+            <a href="https://www.linkedin.com/in/marcelo-garc%C3%ADa-93971b319/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow hover:bg-blue-700 transition">
+              <img src="Images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="https://wa.me/528110635851" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white shadow hover:bg-green-600 transition">
+              <img src="Images/whatsapp.png" alt="WhatsApp" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+  <div class="flex flex-col items-center flex-shrink-0 w-56 md:w-64 snap-center">
+          <div class="w-48 h-48 rounded-full bg-black/10 flex items-center justify-center overflow-hidden">
+            <!-- Cecil profile image -->
+            <img src="Images/Cecil.jpg" alt="Cecil" class="w-full h-full object-cover rounded-full" />
+          </div>
+          <span class="mt-4 font-semibold underline">Cecil Howell</span>
+          <span class="text-sm text-black/60" data-i18="team.cecil.title">Systems Engineer</span>
+          <a href="https://www.linkedin.com/in/cecilyuseihowell/" target="_blank" rel="noopener noreferrer" class="mt-2 w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow hover:bg-blue-700 transition">
+            <img src="Images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+          </a>
+        </div>
+  <div class="carousel-spacer flex-shrink-0"></div>
+      </div>
+  <div id="team-hint" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full text-xs text-black/60 px-2 py-1 rounded bg-white/70 backdrop-blur md:hidden">Swipe →</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/10">
+    <div class="w-full px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+  <img src="Logo/LANCE Primary Logo.png" alt="LANCE AI Logo" class="h-8" style="height:2rem; width:auto; object-fit:contain;" />
+  <span class="text-sm">© <span id="year">2025</span> <span data-i18="footer.brand">LANCE AI</span> · <span data-i18="footer.tag">Build to Transform</span></span>
+      </div>
+      <div class="flex items-center gap-6 text-sm text-black/60">
+    <a href="#" data-i18="footer.privacy" class="hover:opacity-70">Privacy</a>
+    <a href="#" data-i18="footer.terms" class="hover:opacity-70">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+      // Fade in secondary logo
+      const secondaryLogo = document.getElementById('hero-secondary-logo');
+      if (secondaryLogo) {
+        secondaryLogo.onload = () => {
+          secondaryLogo.style.opacity = '1';
+        };
+        if (secondaryLogo.complete) {
+          secondaryLogo.style.opacity = '1';
+        }
+      }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // small helper styles for smoother lifts
+    const style = document.createElement('style');
+    style.textContent = `
+      .hover\:shadow-hard { transition: box-shadow 160ms ease; }
+      .hover\:shadow-hard-white { transition: box-shadow 160ms ease; }
+      .hover\\:-translate-y-0\.5 { transition: transform 160ms ease; }
+    `;
+    document.head.appendChild(style);
+
+    // translations
+    const i18n = {
+      en: {
+        'nav.services': 'Services',
+        'nav.methodology': 'Methodology',
+        'nav.differentiators': 'Differentiators',
+        'nav.contact': 'Contact',
+        'header.cta': 'Schedule Demo',
+        'hero.kicker': 'BUILD TO TRANSFORM',
+        'hero.title': 'We transform businesses with Artificial Intelligence.',
+        'hero.description': 'We improve operational efficiency, reduce costs, and create new business opportunities through strategic AI integration.',
+        'hero.cta_demo': 'Request a Demo',
+        'hero.cta_services': 'View Services',
+        'services.title': 'Main AI Integration Services',
+        'services.subtitle': 'From diagnosis to implementation, we offer AI solutions tailored to your needs.',
+        'services.scan.title': 'AI Opportunity Scan',
+        'services.scan.p': 'Detailed process analysis to identify AI opportunities and develop a scalable strategic plan.',
+  'services.scan.p2': 'Identification of AI Opportunities: The service pinpoints specific opportunities where artificial intelligence can optimize processes.',
+  'services.scan.p3': 'Scalable Strategic Plan: A roadmap is created to effectively implement AI and allow for future growth.',
+  'services.scan.label1': 'Detailed Process Analysis:',
+  'services.scan.desc1': 'An exhaustive review of current processes is conducted to find areas where AI can make improvements.',
+  'services.scan.label2': 'Identification of AI Opportunities:',
+  'services.scan.desc2': 'The service pinpoints specific opportunities where artificial intelligence can optimize processes.',
+  'services.scan.label3': 'Scalable Strategic Plan:',
+  'services.scan.desc3': 'A roadmap is created to effectively implement AI and allow for future growth.',
+        'services.custom.title': 'Custom AI Systems Integration',
+        'services.custom.p': 'Design and integration of custom AI systems that adapt to your infrastructure and maximize results.',
+  'services.custom.p2': 'Fluid Integration: The systems seamlessly integrate with the client\'s existing technology to ensure efficiency.',
+  'services.custom.p3': 'Results Optimization: Personalized AI integration maximizes efficiency and improves the client\'s operational results.',
+  'services.custom.label1': 'Custom AI Design:',
+  'services.custom.desc1': 'Artificial intelligence systems are created to fit the client\'s specific needs for optimal solutions.',
+  'services.custom.label2': 'Fluid Integration:',
+  'services.custom.desc2': 'The systems seamlessly integrate with the client\'s existing technology to ensure efficiency.',
+  'services.custom.label3': 'Results Optimization:',
+  'services.custom.desc3': 'Personalized AI integration maximizes efficiency and improves the client\'s operational results.',
+        'services.sprint.title': 'AI Workflow Automation Sprint',
+        'services.sprint.p': 'Pragmatic and accelerated automation of workflows to obtain fast and measurable results.',
+  'services.sprint.p2': 'Pragmatic Approach: A practical approach is used to avoid complexities and achieve clear, effective results.',
+  'services.sprint.p3': 'Fast, Measurable Results: The service guarantees visible and quantifiable results in a short amount of time through automation.',
+  'services.sprint.label1': 'Automation Acceleration:',
+  'services.sprint.desc1': 'This service uses AI to quickly automate workflows and optimize processes.',
+  'services.sprint.label2': 'Pragmatic Approach:',
+  'services.sprint.desc2': 'A practical approach is used to avoid complexities and achieve clear, effective results.',
+  'services.sprint.label3': 'Fast, Measurable Results:',
+  'services.sprint.desc3': 'The service guarantees visible and quantifiable results in a short amount of time through automation.',
+        'methodology.title': 'Analytical and Engineering Methodology',
+        'methodology.desc': 'We combine analytical rigor with applied engineering to create efficient and practical solutions. Our approach is based on a deep diagnosis to identify bottlenecks and prioritize the actions with the greatest impact.',
+        'methodology.diag': '<strong>Deep Diagnosis:</strong> Exhaustive analysis to detect limitations and opportunities.',
+        'methodology.practical': '<strong>Practical Solutions:</strong> Realistic and adaptable proposals for your operational environment.',
+        'methodology.implement': '<strong>Efficient Implementation:</strong> Development aligned with your capabilities for real impact.',
+        'methodology.strategy.title': 'AI Strategy and Governance',
+        'methodology.strategy.p': 'We advise leaders in creating AI plans aligned with organizational goals and promote the responsible adoption of technology. We establish governance frameworks for the safe, ethical, and regulatory use of AI, strengthening trust and corporate reputation.',
+  'diffs.title': 'Our Values',
+        'diffs.subtitle': 'Our competitive advantage translates into your success.',
+        'diffs.adapt.title': 'Adaptability to Operational DNA',
+        'diffs.adapt.p': 'We adapt AI to your culture and processes, ensuring natural and effective integration.',
+        'diffs.prag.title': 'Pragmatic Methodologies',
+        'diffs.prag.p': 'We prioritize concrete actions with quick impact to show tangible short-term benefits.',
+        'diffs.impact.title': 'Tangible Impact on Growth',
+        'diffs.impact.p': 'We generate measurable improvements in productivity, cost reduction, and new business opportunities.',
+        'pricing.title': 'Simple Pricing',
+        'pricing.subtitle': 'Clear pricing to start fast and grow when you need to.',
+        'pricing.starter.title': 'Starter',
+        'pricing.starter.price': '250 USD',
+        'pricing.starter.f1': 'Guided Demo',
+        'pricing.starter.f2': 'Chatbot Template',
+        'pricing.starter.f3': 'Email Support',
+        'pricing.starter.cta': 'View Details',
+        'pricing.growth.title': 'Growth',
+        'pricing.growth.price': '400 USD',
+        'pricing.growth.f1': 'Automations',
+        'pricing.growth.f2': 'Google/WhatsApp Integration',
+        'pricing.growth.f3': 'Control Panel',
+        'pricing.growth.cta': 'View Details',
+        'pricing.enterprise.title': 'Enterprise',
+        'pricing.enterprise.price': '550 USD',
+        'pricing.enterprise.f1': 'Custom Agents',
+        'pricing.enterprise.f2': 'Dedicated Support',
+        'pricing.enterprise.f3': 'Security Agreements',
+        'pricing.enterprise.cta': 'View Details',
+        'contact.title': "Let's Talk About Your Transformation",
+        'contact.description': 'Every project is unique. Contact us to design a plan tailored to your goals and receive a detailed value proposition.',
+        'team.diego.title': 'Project Manager',
+        'team.marcelo.title': 'Head of Operations',
+        'team.cecil.title': 'Systems Engineer',
+        'footer.brand': 'LANCE AI',
+        'footer.tag': 'Build to Transform',
+        'footer.privacy': 'Privacy',
+        'footer.terms': 'Terms'
+      },
+      es: {
+        'nav.services': 'Servicios',
+        'nav.methodology': 'Metodología',
+        'nav.differentiators': 'Diferenciadores',
+        'nav.contact': 'Contacto',
+        'header.cta': 'Agendar Demo',
+        'hero.kicker': 'BUILD TO TRANSFORM',
+        'hero.title': 'Transformamos negocios con Inteligencia Artificial.',
+        'hero.description': 'Mejoramos la eficiencia operativa, reducimos costos y creamos nuevas oportunidades de negocio mediante la integración estratégica de IA.',
+        'hero.cta_demo': 'Solicitar una Demo',
+        'hero.cta_services': 'Ver Servicios',
+        'services.title': 'Servicios Principales de Integración de IA',
+        'services.subtitle': 'Desde el diagnóstico hasta la implementación, ofrecemos soluciones de IA adaptadas a tus necesidades.',
+        'services.scan.title': 'Escaneo de Oportunidades de IA',
+        'services.scan.p': 'Análisis detallado de procesos para identificar oportunidades de IA y desarrollar un plan estratégico escalable.',
+  'services.scan.p2': 'Identificación de Oportunidades de IA: El servicio identifica oportunidades específicas donde la inteligencia artificial puede optimizar procesos.',
+  'services.scan.p3': 'Plan Estratégico Escalable: Se crea una hoja de ruta para implementar IA de manera efectiva y permitir el crecimiento futuro.',
+  'services.scan.label1': 'Análisis Detallado de Procesos:',
+  'services.scan.desc1': 'Se realiza una revisión exhaustiva de los procesos actuales para encontrar áreas donde la IA puede mejorar.',
+  'services.scan.label2': 'Identificación de Oportunidades de IA:',
+  'services.scan.desc2': 'El servicio identifica oportunidades específicas donde la inteligencia artificial puede optimizar procesos.',
+  'services.scan.label3': 'Plan Estratégico Escalable:',
+  'services.scan.desc3': 'Se crea una hoja de ruta para implementar IA de manera efectiva y permitir el crecimiento futuro.',
+        'services.custom.title': 'Integración de Sistemas de IA a Medida',
+        'services.custom.p': 'Diseño e integración de sistemas de IA personalizados que se adaptan a tu infraestructura y maximizan resultados.',
+  'services.custom.p2': 'Integración Fluida: Los sistemas se integran perfectamente con la tecnología existente del cliente para garantizar eficiencia.',
+  'services.custom.p3': 'Optimización de Resultados: La integración personalizada de IA maximiza la eficiencia y mejora los resultados operativos del cliente.',
+  'services.custom.label1': 'Diseño de IA Personalizado:',
+  'services.custom.desc1': 'Se crean sistemas de inteligencia artificial adaptados a las necesidades específicas del cliente para soluciones óptimas.',
+  'services.custom.label2': 'Integración Fluida:',
+  'services.custom.desc2': 'Los sistemas se integran perfectamente con la tecnología existente del cliente para garantizar eficiencia.',
+  'services.custom.label3': 'Optimización de Resultados:',
+  'services.custom.desc3': 'La integración personalizada de IA maximiza la eficiencia y mejora los resultados operativos del cliente.',
+        'services.sprint.title': 'Sprint de Automatización de Flujos con IA',
+        'services.sprint.p': 'Automatización pragmática y acelerada de flujos de trabajo para obtener resultados rápidos y medibles.',
+  'services.sprint.p2': 'Enfoque Pragmático: Se utiliza un enfoque práctico para evitar complejidades y lograr resultados claros y efectivos.',
+  'services.sprint.p3': 'Resultados Rápidos y Medibles: El servicio garantiza resultados visibles y cuantificables en poco tiempo mediante la automatización.',
+  'services.sprint.label1': 'Aceleración de Automatización:',
+  'services.sprint.desc1': 'Este servicio utiliza IA para automatizar rápidamente flujos de trabajo y optimizar procesos.',
+  'services.sprint.label2': 'Enfoque Pragmático:',
+  'services.sprint.desc2': 'Se utiliza un enfoque práctico para evitar complejidades y lograr resultados claros y efectivos.',
+  'services.sprint.label3': 'Resultados Rápidos y Medibles:',
+  'services.sprint.desc3': 'El servicio garantiza resultados visibles y cuantificables en poco tiempo mediante la automatización.',
+        'methodology.title': 'Metodología Analítica e Ingenieril',
+        'methodology.desc': 'Combinamos rigor analítico con ingeniería aplicada para crear soluciones eficientes y prácticas. Nuestro enfoque se basa en un diagnóstico profundo para identificar cuellos de botella y priorizar las acciones de mayor impacto.',
+        'methodology.diag': '<strong>Diagnóstico Profundo:</strong> Análisis exhaustivo para detectar limitaciones y oportunidades.',
+        'methodology.practical': '<strong>Soluciones Prácticas:</strong> Propuestas realistas y adaptables para tu entorno operativo.',
+        'methodology.implement': '<strong>Implementación Eficiente:</strong> Desarrollo alineado a tus capacidades para un impacto real.',
+        'methodology.strategy.title': 'Estrategia y Gobernanza de IA',
+        'methodology.strategy.p': 'Asesoramos a líderes en la creación de planes de IA alineados a los objetivos organizacionales y promovemos la adopción responsable de la tecnología. Establecemos marcos de gobernanza para el uso seguro, ético y regulatorio de la IA, fortaleciendo la confianza y reputación corporativa.',
+  'diffs.title': 'Nuestros Valores',
+        'diffs.subtitle': 'Nuestra ventaja competitiva se traduce en tu éxito.',
+        'diffs.adapt.title': 'Adaptabilidad al ADN Operativo',
+        'diffs.adapt.p': 'Adaptamos la IA a tu cultura y procesos, asegurando una integración natural y efectiva.',
+        'diffs.prag.title': 'Metodologías Pragmáticas',
+        'diffs.prag.p': 'Priorizamos acciones concretas de impacto rápido para mostrar beneficios tangibles a corto plazo.',
+        'diffs.impact.title': 'Impacto Tangible en el Crecimiento',
+        'diffs.impact.p': 'Generamos mejoras medibles en productividad, reducción de costos y nuevas oportunidades de negocio.',
+        'pricing.title': 'Precios Simples',
+        'pricing.subtitle': 'Precios claros para empezar rápido y crecer cuando lo necesites.',
+        'pricing.starter.title': 'Inicial',
+        'pricing.starter.price': '250 USD',
+        'pricing.starter.f1': 'Demo Guiada',
+        'pricing.starter.f2': 'Plantilla de Chatbot',
+        'pricing.starter.f3': 'Soporte por Email',
+        'pricing.starter.cta': 'Ver Detalles',
+        'pricing.growth.title': 'Crecimiento',
+        'pricing.growth.price': '400 USD',
+        'pricing.growth.f1': 'Automatizaciones',
+        'pricing.growth.f2': 'Integración Google/WhatsApp',
+        'pricing.growth.f3': 'Panel de Control',
+        'pricing.growth.cta': 'Ver Detalles',
+        'pricing.enterprise.title': 'Empresarial',
+        'pricing.enterprise.price': '550 USD',
+        'pricing.enterprise.f1': 'Agentes Personalizados',
+        'pricing.enterprise.f2': 'Soporte Dedicado',
+        'pricing.enterprise.f3': 'Acuerdos de Seguridad',
+        'pricing.enterprise.cta': 'Ver Detalles',
+        'contact.title': 'Hablemos de tu Transformación',
+        'contact.description': 'Cada proyecto es único. Contáctanos para diseñar un plan a la medida de tus objetivos y recibir una propuesta de valor detallada.',
+  // 'contact.cta': 'Contáctanos por WhatsApp', // Removed the translation key
+        'team.diego.title': 'Gerente de Proyectos',
+        'team.marcelo.title': 'Jefe de Operaciones',
+        'team.cecil.title': 'Ingeniero de Sistemas',
+        'footer.brand': 'LANCE AI',
+        'footer.tag': 'Build to Transform',
+        'footer.privacy': 'Privacidad',
+        'footer.terms': 'Términos'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = i18n[lang] || i18n.en;
+      document.querySelectorAll('[data-i18]').forEach(el => {
+        const key = el.getAttribute('data-i18');
+        if (dict[key]) {
+          // If translation contains HTML tags, inject as HTML
+          if (/[<>]/.test(dict[key])) {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+  // Dynamically update <title> and og:title for tagline translation
+  const titleTag = document.querySelector('title');
+  const ogTitleTag = document.querySelector('meta[property="og:title"]');
+  if (titleTag) titleTag.textContent = `LANCE AI — ${dict['footer.tag']}`;
+  if (ogTitleTag) ogTitleTag.setAttribute('content', `LANCE AI — ${dict['footer.tag']}`);
+      // small directional/copy adjustments if needed
+      // update CTA in contact area
+      const contactCta = document.querySelector('#contact a');
+      if (contactCta && dict['contact.cta']) contactCta.textContent = dict['contact.cta'];
+      // persist selection
+      localStorage.setItem('site_lang', lang);
+    }
+
+    // wire toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('site_lang') || 'es';
+      setLanguage(saved);
+      document.querySelectorAll('#lang-toggle [data-lang]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.getAttribute('data-lang');
+          setLanguage(lang);
+        });
+      });
+
+      // Mobile menu logic
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      if (mobileMenu && mobileMenuToggle && mobileMenuClose) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.style.display = 'flex';
+          setTimeout(() => mobileMenu.style.transform = 'translateY(0)', 10);
+        });
+        mobileMenuClose.addEventListener('click', () => {
+          mobileMenu.style.transform = '-translate-y-full';
+          setTimeout(() => mobileMenu.style.display = 'none', 300);
+        });
+      }
+
+      // Fade in hero stock photo
+      const heroImg = document.getElementById('hero-stock-photo');
+      if (heroImg) {
+        heroImg.onload = () => {
+          heroImg.style.opacity = '1';
+        };
+        if (heroImg.complete) {
+          heroImg.style.opacity = '1';
+        }
+      }
+
+      // Slideshow logic
+      const slidesWrapper = document.getElementById('slides-wrapper');
+      const slides = document.querySelectorAll('#slides-wrapper .slide');
+      const leftBtn = document.getElementById('slide-left');
+      const rightBtn = document.getElementById('slide-right');
+      let currentSlide = 0;
+
+      function showSlide(idx) {
+        slidesWrapper.style.transform = `translateX(-${idx * 100}%)`;
+        // Hide left arrow on first slide, right arrow on last slide
+        if (leftBtn) leftBtn.style.display = idx === 0 ? 'none' : 'flex';
+        if (rightBtn) rightBtn.style.display = idx === slides.length - 1 ? 'none' : 'flex';
+      }
+
+      function prevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+          showSlide(currentSlide);
+        }
+      }
+
+      function nextSlide() {
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          showSlide(currentSlide);
+        }
+      }
+
+      if (leftBtn) leftBtn.addEventListener('click', prevSlide);
+      if (rightBtn) rightBtn.addEventListener('click', nextSlide);
+      showSlide(currentSlide);
+
+      // Animate on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('animate-bounce-on-scroll')) {
+              const slidesWrapper = entry.target.querySelector('#slides-wrapper');
+              if (slidesWrapper) {
+                slidesWrapper.classList.add('bounce-animation');
+                slidesWrapper.addEventListener('animationend', () => {
+                  slidesWrapper.classList.remove('bounce-animation');
+                }, { once: true });
+              }
+            } else {
+              entry.target.classList.add('is-visible');
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.animate-on-scroll, .animate-bounce-on-scroll').forEach(section => {
+        observer.observe(section);
+      });
+
+      // Horizontal team carousel controls
+      (function(){
+        const scroller = document.getElementById('team-scroll');
+        if(!scroller) return;
+        const btnL = document.getElementById('team-left');
+        const btnR = document.getElementById('team-right');
+        const cards = Array.from(scroller.querySelectorAll('.flex-col.items-center'));
+        const hint = document.getElementById('team-hint');
+        const spacers = () => Array.from(scroller.querySelectorAll('.carousel-spacer'));
+
+        function zeroSpacers(){ spacers().forEach(s=> s.style.width='0px'); }
+        function sizeSpacers(){
+          if(!cards.length) return;
+          const isMobile = window.innerWidth < 768;
+          const firstW = cards[0].offsetWidth;
+          const base = (scroller.clientWidth - firstW)/2;
+          const side = isMobile ? Math.max(base - 24, 12) : base;
+          spacers().forEach(s => { s.style.width = side > 0 ? side + 'px' : '0px'; });
+        }
+        function setNoScrollMode(on){
+          if(on){
+            scroller.classList.remove('overflow-x-auto','snap-x','snap-mandatory');
+            scroller.classList.add('overflow-x-hidden');
+            zeroSpacers();
+            if(btnL) btnL.style.display='none';
+            if(btnR) btnR.style.display='none';
+            if(hint) hint.style.display='none';
+          } else {
+            scroller.classList.add('overflow-x-auto','snap-x','snap-mandatory');
+            scroller.classList.remove('overflow-x-hidden');
+            if(btnL) btnL.style.display='';
+            if(btnR) btnR.style.display='';
+          }
+        }
+        function reflow(){
+          // Ensure measurable state and remove spacer influence before measuring
+          scroller.classList.add('overflow-x-auto');
+          scroller.classList.remove('overflow-x-hidden');
+          zeroSpacers();
+          const fits = scroller.scrollWidth <= scroller.clientWidth + 1;
+          if(fits){
+            setNoScrollMode(true);
+          } else {
+            setNoScrollMode(false);
+            sizeSpacers();
+          }
+        }
+        function centerNearest(){
+          if(scroller.classList.contains('overflow-x-hidden')) return; // no centering when all fit
+          const scrollCenter = scroller.scrollLeft + scroller.clientWidth/2;
+          let best = null; let bestDist = Infinity;
+          cards.forEach(c => {
+            const center = c.offsetLeft + c.offsetWidth/2;
+            const dist = Math.abs(center - scrollCenter);
+            if(dist < bestDist){ bestDist = dist; best = c; }
+          });
+          if(best){
+            const targetLeft = best.offsetLeft + best.offsetWidth/2 - scroller.clientWidth/2;
+            scroller.scrollTo({ left: targetLeft, behavior: 'smooth'});
+          }
+        }
+        const debounce = (fn, d=120)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), d);} };
+        scroller.addEventListener('scroll', debounce(centerNearest, 140), { passive:true });
+        const cardWidth = () => cards[0]?.offsetWidth || 260;
+        function updateButtons(){
+          const maxScroll = scroller.scrollWidth - scroller.clientWidth - 4;
+          const noScroll = maxScroll <= 0 || scroller.classList.contains('overflow-x-hidden');
+          const isMobile = window.innerWidth < 768;
+          // Only show these small circular buttons on mobile; hide on md+ (desktop)
+          if(!isMobile){ if(btnL) btnL.style.display='none'; if(btnR) btnR.style.display='none'; return; }
+          if(btnL) btnL.style.opacity = noScroll || scroller.scrollLeft <= 4 ? '0.3' : '1';
+          if(btnR) btnR.style.opacity = noScroll || scroller.scrollLeft >= maxScroll ? '0.3' : '1';
+          if(noScroll){ if(btnL) btnL.style.display='none'; if(btnR) btnR.style.display='none'; }
+        }
+        function smoothScroll(delta){ scroller.scrollBy({ left: delta, behavior: 'smooth' }); }
+        btnL && btnL.addEventListener('click', ()=> smoothScroll(-cardWidth()-32));
+        btnR && btnR.addEventListener('click', ()=> smoothScroll(cardWidth()+32));
+        scroller.addEventListener('scroll', ()=>{ updateButtons(); const hintEl=document.getElementById('team-hint'); if(hintEl) hintEl.style.display='none'; }, { passive: true });
+        scroller.addEventListener('touchstart', ()=>{ const hintEl=document.getElementById('team-hint'); if(hintEl) hintEl.style.display='none'; }, { passive:true });
+        window.addEventListener('resize', debounce(()=>{ reflow(); updateButtons(); }, 150));
+        // initial
+        reflow();
+        updateButtons();
+        if(cards[0] && !scroller.classList.contains('overflow-x-hidden')){
+          const start = cards[0].offsetLeft + cards[0].offsetWidth/2 - scroller.clientWidth/2;
+          scroller.scrollLeft = start > 0 ? start : 0;
+        }
+      })();
+    });
+  </script>
+
+</body>
+</html>

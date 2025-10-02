@@ -1,0 +1,49 @@
+# Netlify configuration for LANCE site
+# Static site: no build step required.
+
+[build]
+  publish = "."
+  command = ""
+
+# Redirect www -> apex
+[[redirects]]
+  from = "https://www.lance-ai.com/*"
+  to = "https://lance-ai.com/:splat"
+  status = 301
+  force = true
+
+# (Optional) enforce HTTPS (Netlify usually auto-adds). Keep in case someone hits http://
+[[redirects]]
+  from = "http://lance-ai.com/*"
+  to = "https://lance-ai.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.lance-ai.com/*"
+  to = "https://lance-ai.com/:splat"
+  status = 301
+  force = true
+
+# Basic security & performance headers.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # CSP allows Tailwind CDN + inline (because current page uses inline <script>). Adjust if you externalize JS.
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; font-src 'self' data:;"
+
+# Cache static images for 7 days (adjust as desired)
+[[headers]]
+  for = "/Images/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[headers]]
+  for = "/Images/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
